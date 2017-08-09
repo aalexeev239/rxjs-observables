@@ -1,9 +1,5 @@
 'use strict';
 
-for (let letter of 'Observable') {
-    console.log(letter);
-}
-
 class Observable {
     constructor(source) {
         this.source = source.split('');
@@ -14,20 +10,19 @@ class Observable {
         for (let item of this.result) {
             next(item);
         }
+
+        done
     }
 
     filter(predicate) {
         this.result = this.result.filter(predicate);
         return this;
     }
-
-    map(callback) {
-        this.result = this.result.map(callback);
-        return this;
-    }
 }
 
 new Observable('Observable')
-    .map(letter => letter.toUpperCase())
-    .filter(letter => letter === 'O')
-    .subscribe(letter => console.log(letter));
+    .filter(letter => letter.charCodeAt(0) % 2 === 0)
+    .subscribe(
+        letter => console.log(letter),
+        () => console.log('done')
+    );
