@@ -3,6 +3,7 @@
     "google"
   ],
   "rules": {
+    "require-jsdoc": 0,
     "no-console": 0,
     "max-len": [
       2,

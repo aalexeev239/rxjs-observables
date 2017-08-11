@@ -8,4 +8,7 @@ function observe(observable, next, done) {
     done();
 }
 
-observe('Observable', letter => console.log(letter), () => console.log('done'));
+observe('Observable',
+    (letter) => console.log(letter),
+    () => console.log('done')
+);

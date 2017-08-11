@@ -12,9 +12,11 @@ Rx.Observable.create((observer) => {
     setTimeout(() => {
         observer.next(4);
     }, 2000);
-}).subscribe((next) => {
+}).subscribe(
+    (next) => {
         console.log('--- next: ', next);
-    }, error => {
+    },
+    (error) => {
         console.log('--- error', error);
     },
     () => {
@@ -24,6 +26,7 @@ Rx.Observable.create((observer) => {
 document.addEventListener('click', onClick);
 // 'click' -> onClick();
 
-function handler() {}
+function handler() {
+}
 // ...
 const value = handler();

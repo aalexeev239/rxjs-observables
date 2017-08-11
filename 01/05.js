@@ -17,6 +17,6 @@ class Observable {
 
 new Observable('Observable')
     .subscribe(
-        letter => console.log(letter),
+        (letter) => console.log(letter),
         () => console.log('done')
     );

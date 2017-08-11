@@ -6,4 +6,4 @@ function observe(observable, next) {
     }
 }
 
-observe('Observable', letter => console.log(letter));
+observe('Observable', (letter) => console.log(letter));

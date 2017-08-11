@@ -11,7 +11,7 @@ class Observable {
             next(item);
         }
 
-        done
+        done();
     }
 
     filter(predicate) {
@@ -26,9 +26,9 @@ class Observable {
 }
 
 new Observable('Observable')
-    .filter(letter => letter.charCodeAt(0) % 2 === 0)
-    .map(letter => letter.toUpperCase())
+    .filter((letter) => letter.charCodeAt(0) % 2 === 0)
+    .map((letter) => letter.toUpperCase())
     .subscribe(
-        letter => console.log(letter),
+        (letter) => console.log(letter),
         () => console.log('done')
     );
