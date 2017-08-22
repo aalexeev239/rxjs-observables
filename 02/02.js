@@ -22,11 +22,3 @@ Rx.Observable.create((observer) => {
     () => {
         console.log('done');
     });
-
-document.addEventListener('click', onClick);
-// 'click' -> onClick();
-
-function handler() {
-}
-// ...
-const value = handler();
