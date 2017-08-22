@@ -7,9 +7,9 @@ class Observable {
     }
 
     subscribe(next, done) {
-        for (let item of this.result) {
+        this.result.forEach((item) => {
             next(item);
-        }
+        });
 
         done();
     }
