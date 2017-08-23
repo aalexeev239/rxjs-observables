@@ -24,7 +24,7 @@ mouseMove$
 
 mouseUp$
     .subscribe(() => {
-        console.log('--- mouseUp');
+        console.log('--- mouseUp$');
     });
 
 mouseDown$
