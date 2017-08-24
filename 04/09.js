@@ -57,7 +57,6 @@ const loading$ =
         .do((v) => console.log(`============ ${v} ============`))
         .distinctUntilChanged();
 
-
 start$
     .subscribe(() => {
         outputElt.innerHTML = '';

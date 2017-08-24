@@ -20,8 +20,6 @@ const request$ = query$
         return Rx.Observable.from(request);
     });
 
-
-
 query$
     .subscribe((search) => {
         console.log('--- search', search);
