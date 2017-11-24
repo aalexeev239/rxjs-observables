@@ -15,7 +15,7 @@ function drawLine(start, end) {
 
 Rx.Observable.fromEvent(areaElement, 'mousemove')
     .subscribe((event) => {
-        textElement.innerHTML = `top: ${event.x}, <br> left: ${event.y}`;
+        textElement.innerHTML = `top: ${event.y}, <br> left: ${event.x}`;
     });
 
 Rx.Observable.fromEvent(areaElement, 'mousemove')

@@ -19,7 +19,7 @@ const mouseDown$ = Rx.Observable.fromEvent(areaElement, 'mousedown');
 
 mouseMove$
     .subscribe((event) => {
-        textElement.innerHTML = `top: ${event.x}, <br> left: ${event.y}`;
+        textElement.innerHTML = `top: ${event.y}, <br> left: ${event.x}`;
     });
 
 mouseUp$
